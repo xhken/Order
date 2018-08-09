@@ -21,6 +21,8 @@ public class ProductCategory
     private String categoryName;
     private Integer categoryType;
 
-
+    public String toString() {
+        return "categoryId:" + categoryId + " categoryName:" + categoryName + " categoryType:" + categoryType;
+    }
     
 }
