@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by ShiXiaohou on 2018/7/25.
+ * Created by Ken on 2018/7/25.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

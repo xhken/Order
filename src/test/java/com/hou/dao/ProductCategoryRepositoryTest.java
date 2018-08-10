@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import static org.junit.Assert.*;
 
 /**
- * Created by ShiXiaohou on 2018/8/6.
+ * Created by Ken on 2018/8/6.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -46,8 +46,27 @@ public class ProductCategoryRepositoryTest {
 //        });
 
 
+
         repository.findById(1).ifPresent(productCategory -> { log.info("product_category:{} for id = 1", productCategory.toString()); });
 
 
     }
+
+    @Test
+    public void saveTest() {
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setCategoryId(2);
+        productCategory.setCategoryName("夏天必点");
+        productCategory.setCategoryType(101);
+        repository.save(productCategory);
+    }
+
+    @Test
+    public void updateTest() {
+        repository.findById(2).ifPresent(productCategory -> {
+            productCategory.setCategoryType(102);
+            repository.save(productCategory);
+        });
+    }
+
 }

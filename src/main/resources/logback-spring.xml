@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
-    <property name="log.path" value="/Users/ShiXiaohou/log/tomcat" />
+    <property name="log.path" value="/Users/Ken/log/tomcat" />
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender" debug="false">
         <encoder>

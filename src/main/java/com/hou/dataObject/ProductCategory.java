@@ -1,25 +1,27 @@
 package com.hou.dataObject;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 /**
- * Created by ShiXiaohou on 2018/8/6.
+ * Created by Ken on 2018/8/6.
  */
 @Table(name = "product_category")
 @Entity
 @Data
+@DynamicUpdate
 public class ProductCategory
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoryId;
     private String categoryName;
     private Integer categoryType;
+    private Date createTime;
+    private Date updateTime;
 
     public String toString() {
         return "categoryId:" + categoryId + " categoryName:" + categoryName + " categoryType:" + categoryType;
