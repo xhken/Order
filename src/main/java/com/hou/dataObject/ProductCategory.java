@@ -12,7 +12,7 @@ import java.util.Date;
 @Table(name = "product_category")
 @Entity
 @Data
-@DynamicUpdate
+@DynamicUpdate  //自动更新时间
 public class ProductCategory
 {
     @Id
