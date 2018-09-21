@@ -80,7 +80,7 @@ public class ProductCategoryRepositoryTest {
     public void findByCategoryTypeInTest() {
         List<Integer> list = Arrays.asList(1, 2);
         List<ProductCategory> result = repository.findByCategoryIdIn(list);
-        Assert.assertNotEquals(0, result);
+        Assert.assertNotEquals(0, result.size());
     }
 
 }
