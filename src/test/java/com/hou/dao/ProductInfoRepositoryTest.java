@@ -28,7 +28,7 @@ public class ProductInfoRepositoryTest {
         ProductInfo productInfo = new ProductInfo();
         productInfo.setProductId("123");
         productInfo.setProductName("豆沙包");
-        productInfo.setProductPrice(BigDecimal.valueOf(9.00));
+        productInfo.setProductPrice(BigDecimal.valueOf(123456.889));
         productInfo.setProductStock(100);
         productInfo.setProductIcon("http://www.baidu.com");
         productInfo.setProductStatus(1);
