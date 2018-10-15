@@ -26,14 +26,14 @@ public class ProductInfoRepositoryTest {
     public void saveTest()
     {
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123");
-        productInfo.setProductName("豆沙包");
-        productInfo.setProductPrice(BigDecimal.valueOf(123456.889));
-        productInfo.setProductStock(100);
+        productInfo.setProductId("124");
+        productInfo.setProductName("蟹黄包");
+        productInfo.setProductPrice(BigDecimal.valueOf(2.5));
+        productInfo.setProductStock(20);
         productInfo.setProductIcon("http://www.baidu.com");
-        productInfo.setProductStatus(1);
+        productInfo.setProductStatus(0);
         productInfo.setCategoryType(101);
         ProductInfo result = repository.save(productInfo);
-        Assert.assertNotNull(result);
+//        Assert.assertNotNull(result);
     }
 }

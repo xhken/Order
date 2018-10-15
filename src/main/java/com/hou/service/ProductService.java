@@ -2,7 +2,10 @@ package com.hou.service;
 
 import com.hou.dao.ProductInfoRepository;
 import com.hou.dataObject.ProductInfo;
+import com.hou.dataObject.enums.ProductStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +25,15 @@ public class ProductService {
 
     List<ProductInfo> findUpAll()
     {
-        return repository.findByProductStatus(0);
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
+    }
+
+    Page<ProductInfo> findAll(Pageable pageable) {
+        return repository.findAll(pageable);
+    }
+
+    public ProductInfo save(ProductInfo productInfo) {
+        return repository.save(productInfo);
     }
 
 }
