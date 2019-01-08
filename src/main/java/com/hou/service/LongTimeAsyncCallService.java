@@ -11,10 +11,12 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Ken on 2018/9/26.
  */
+@SuppressWarnings("ALL")
 @Service
 public class LongTimeAsyncCallService {
     private final int CorePoolSize = 4;
     private final int NeedSeconds = 3;
+    @SuppressWarnings("AlibabaThreadPoolCreation")
     private ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(CorePoolSize);
     public void makeRemoteCallAndUnknownWhenFinish(LongTermTaskCallback callback){
         System.out.println("完成此任务需要 : " + NeedSeconds + " 秒");

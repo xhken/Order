@@ -23,6 +23,7 @@ public class ProductCategory
     private Date createTime;
     private Date updateTime;
 
+    @Override
     public String toString() {
         return "categoryId:" + categoryId + " categoryName:" + categoryName + " categoryType:" + categoryType;
     }

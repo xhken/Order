@@ -14,15 +14,15 @@
         </encoder>
     </appender>
 
-    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %thread %p %c - &lt;%m&gt;%n</pattern>
-        </encoder>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!--路径-->
-            <FileNamePattern>${log.path}/%d{yyyy-MM-dd_HH-mm}.log</FileNamePattern>
-        </rollingPolicy>
-    </appender>
+    <!--<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<encoder>-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %thread %p %c - &lt;%m&gt;%n</pattern>-->
+        <!--</encoder>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash;路径&ndash;&gt;-->
+            <!--<FileNamePattern>${log.path}/%d{yyyy-MM-dd_HH-mm}.log</FileNamePattern>-->
+        <!--</rollingPolicy>-->
+    <!--</appender>-->
 
     <root level="info">
         <appender-ref ref="console"/>
